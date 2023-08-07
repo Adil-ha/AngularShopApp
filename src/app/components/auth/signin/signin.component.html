@@ -1,1 +1,26 @@
-<p>signin works!</p>
+<div class="signup">
+  <div class="form-container">
+    <h1>Insription</h1>
+    <form action="">
+      <div class="form-line">
+        <input
+          type="email"
+          name="email"
+          placeholder="Your email..."
+          [(ngModel)]="user.email"
+        />
+      </div>
+      <div class="form-line">
+        <input
+          type="password"
+          name="password"
+          placeholder="Your password..."
+          [(ngModel)]="user.password"
+        />
+      </div>
+
+      <button class="btn" (click)="handleSubmit()">Connect</button>
+      <p>{{ user | json }}</p>
+    </form>
+  </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from "src/app/models/user";
 
 @Component({
   selector: 'app-signin',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent {
-
+  user:User={
+    email:"",
+    password:"",
+  }
+  handleSubmit(){
+    console.log(this.user);
+  }
 }

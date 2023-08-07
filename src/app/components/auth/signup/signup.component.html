@@ -1,4 +1,4 @@
-<div class="signup">
+<!-- <div class="signup">
   <div class="form-inline">
     <input type="text" name="firstname" [(ngModel)]="firstname" />
     <button (click)="handleSave()">Save</button>
@@ -14,4 +14,52 @@
       </li>
     </ul>
   </nav>
+</div> -->
+
+<div class="signup">
+  <div class="form-container">
+    <h1>Insription</h1>
+    <form action="">
+      <div class="form-line" id="form-line-one">
+        <input
+          type="text"
+          name="firstname"
+          placeholder="Your firstname..."
+          [(ngModel)]="user.firstname"
+        />
+        <input
+          type="text"
+          name="lastname"
+          placeholder="Your lastname..."
+          [(ngModel)]="user.lastname"
+        />
+      </div>
+      <div class="form-line">
+        <input
+          type="email"
+          name="email"
+          placeholder="Your email..."
+          [(ngModel)]="user.email"
+        />
+      </div>
+      <div class="form-line">
+        <input
+          type="password"
+          name="password"
+          placeholder="Your password..."
+          [(ngModel)]="user.password"
+        />
+      </div>
+      <div class="form-line">
+        <input
+          type="password"
+          name="passwordConfirm"
+          placeholder="Confirm your password..."
+          [(ngModel)]="user.passwordConfirm"
+        />
+      </div>
+      <button class="btn" (click)="handleSubmit()"></button>
+      <p>{{ user | json }}</p>
+    </form>
+  </div>
 </div>
