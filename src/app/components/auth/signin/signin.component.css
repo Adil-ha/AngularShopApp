@@ -42,3 +42,10 @@ button{
   font-weight: bold;
   font-size: 1.4rem;
 }
+
+button:disabled{
+  cursor: not-allowed;
+}
+.error{
+  color: red;
+}

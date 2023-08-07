@@ -1,26 +1,39 @@
 <div class="signup">
   <div class="form-container">
     <h1>Insription</h1>
-    <form action="">
+    <form action="" [formGroup]="signinForm">
       <div class="form-line">
         <input
           type="email"
           name="email"
           placeholder="Your email..."
-          [(ngModel)]="user.email"
+          [formControl]="email"
         />
+        <div class="error" *ngIf="email.dirty && !email.valid">
+          <p *ngIf="email.hasError('required')">Email required !</p>
+          <p *ngIf="!email.hasError('required')">Email is not valid !</p>
+        </div>
       </div>
       <div class="form-line">
         <input
           type="password"
           name="password"
           placeholder="Your password..."
-          [(ngModel)]="user.password"
+          [formControl]="password"
         />
       </div>
+      <div class="error" *ngIf="password.dirty && !password.valid">
+        <p *ngIf="password.hasError('required')">Password required !</p>
+        <p *ngIf="!password.hasError('required')">Password is not valid !</p>
+      </div>
 
-      <button class="btn" (click)="handleSubmit()">Connect</button>
-      <p>{{ user | json }}</p>
+      <button
+        class="btn"
+        [disabled]="!signinForm.valid"
+        (click)="handleSubmit()"
+      >
+        Connect
+      </button>
     </form>
   </div>
 </div>
