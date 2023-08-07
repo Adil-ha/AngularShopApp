@@ -9,18 +9,28 @@ export class SignupComponent {
 
   firstname : string = "";
   names : string[] = [];
+  updateIndex :number=-1;
 
   handleSave(){
     if (this.firstname) {
-      this.names.push(this.firstname);
+      if (this.updateIndex>=0) {
+        this.names[this.updateIndex]=this.firstname
+      } else {
+        this.names.push(this.firstname);
+      }
       this.firstname="";
+      this.updateIndex = -1;
     }
   }
 
   handleDelete(index : number){
     if (index >= 0) {
-      const newArray = this.names.splice(index,1)
+      this.names.splice(index,1)
     }
+  }
+  handleUpdate(name:string, index:number){
+    this.firstname = name;
+    this.updateIndex=index;
   }
 
 }

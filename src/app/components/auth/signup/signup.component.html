@@ -3,14 +3,15 @@
     <input type="text" name="firstname" [(ngModel)]="firstname" />
     <button (click)="handleSave()">Save</button>
   </div>
-  <table>
-    <tbody>
-      <tr *ngFor="let name of names; let index = index">
-        <td>
+  <nav>
+    <ul>
+      <li *ngFor="let name of names; let index = index">
+        <a>
           {{ name }}
           <button (click)="handleDelete(index)">Delete {{ index }}</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+          <button (click)="handleUpdate(name, index)">Update</button>
+        </a>
+      </li>
+    </ul>
+  </nav>
 </div>
