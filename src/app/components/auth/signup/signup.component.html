@@ -1,0 +1,16 @@
+<div class="signup">
+  <div class="form-inline">
+    <input type="text" name="firstname" [(ngModel)]="firstname" />
+    <button (click)="handleSave()">Save</button>
+  </div>
+  <table>
+    <tbody>
+      <tr *ngFor="let name of names; let index = index">
+        <td>
+          {{ name }}
+          <button (click)="handleDelete(index)">Delete {{ index }}</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

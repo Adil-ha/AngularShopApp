@@ -1,0 +1,24 @@
+.signup{
+  width: 600px;
+  height: 600px;
+  margin: 20px auto;
+  border: 1px solid black;
+  text-align: center;
+}
+.form-inline input{
+  border:0.1px solid #ccc;
+  height: 40px;
+  width: 60%;
+  margin: 5px;
+  padding: 5px;
+}
+button{
+  height: 40px;
+  background-color: #1d1d1d;
+  border: none;
+  width: 100px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.4rem;
+}

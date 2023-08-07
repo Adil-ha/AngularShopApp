@@ -1,0 +1,50 @@
+.modal-product-view-container{
+  height: 80vh;
+  width: 120vh;
+  background: white;
+  position: fixed;
+  z-index: 88;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.overlay{
+  background-color: rgba(0, 0, 0, 0.548);
+  position: fixed;
+  z-index: 85;
+  height: 100%;
+  width: 100%;
+  top:0px;
+  left:0px;
+}
+.modal-product-view-image{
+  height: 100%;
+  width: 100%;
+}
+img{
+  height: 100%;
+  width: 100%;
+}
+.modal-product-view-details{
+  text-align: center;
+ padding: 25% 0;
+ height: 100%;
+ width: 100%;
+ background: white;
+}
+h3{
+  padding-bottom: 30px;
+}
+h4{
+  padding-bottom: 25px;
+}
+p{
+  padding-bottom: 10px;
+}
+button{
+  padding: 8px 40px;
+}
+
+

@@ -1,0 +1,21 @@
+header{
+  background: rgb(13, 196, 117);
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-size: 2rem;
+  border-bottom: 3px solid black;
+  padding: 0 20px;
+}
+
+ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+li{
+  padding: 0 10PX;
+}
+

@@ -1,0 +1,19 @@
+<div class="modal-product-view">
+  <div class="overlay"></div>
+  <div class="modal-product-view-container">
+    <div class="modal-product-view-image">
+      <img
+        [src]="product ? product.imageUrl[0] : ''"
+        [alt]="product ? product.category[0] : ''"
+      />
+      />
+    </div>
+    <div class="modal-product-view-details">
+      <h3>{{ product?.name }}</h3>
+      <h4>{{ (product?.sold_price || 0) / 100 }}</h4>
+      <h4>{{ (product?.regular_price || 0) / 100 }}</h4>
+      <p>Crée le {{ product?.created_at | date : "dd/mm/yyyy" }}</p>
+      <button (click)="CloseModal()">Fermer</button>
+    </div>
+  </div>
+</div>
