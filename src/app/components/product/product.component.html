@@ -1,5 +1,5 @@
-<div class="product" (click)="handleClickProduct(product)">
-  <div class="product-image">
+<div class="product">
+  <div class="product-image" (click)="handleClickProduct(product)">
     <img
       [src]="product ? product.imageUrl[0] : ''"
       [alt]="product ? product.category[0] : ''"
@@ -14,4 +14,5 @@
       </del>
     </div>
   </div>
+  <button [routerLink]="['product-detail', product?.slug]">Details</button>
 </div>

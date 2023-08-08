@@ -4,15 +4,20 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  border: 1px solid black;
+  color: black;
+  transition: 0.2s;
 }
+.product:hover{
+  outline: 5px solid green;
+}
+
 .product-image{
   height: 70%;
   background-color: green;
 }
 .procduct-details{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
 }

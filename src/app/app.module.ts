@@ -12,6 +12,9 @@ import { ModalProductViewComponent } from './components/modal-product-view/modal
 import { SigninComponent } from './components/auth/signin/signin.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from "@angular/router";
+import { ROUTES } from "./app.routing";
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -23,13 +26,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProductListComponent,
     ModalProductViewComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]
