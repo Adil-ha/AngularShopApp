@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from "@angular/router";
 import { ROUTES } from "./app.routing";
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
     ModalProductViewComponent,
     SigninComponent,
     SignupComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
