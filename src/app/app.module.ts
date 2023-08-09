@@ -8,14 +8,20 @@ import { ContainerComponent } from './components/container/container.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
+import { ProductItemComponent } from './components/product-item/product-item.component';
 import { ModalProductViewComponent } from './components/modal-product-view/modal-product-view.component';
 import { SigninComponent } from './components/auth/signin/signin.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from "@angular/router";
-import { ROUTES } from "./app.routing";
-import { ProductDetailComponent } from './components/product-detail/product-detail.component';
-import { LoadingComponent } from './components/loading/loading.component';
+import { RouterModule } from '@angular/router';
+import { ROUTES } from './app.routing';
+import { LoadingComponent } from './loading/loading.component';
+import { PaymentCardComponent } from './payment-card/payment-card.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ProductDescriptionComponent } from './product-description/product-description.component';
+import { ProductAdditionalInfoComponent } from './product-additional-info/product-additional-info.component';
+
+
 
 @NgModule({
   declarations: [
@@ -25,11 +31,15 @@ import { LoadingComponent } from './components/loading/loading.component';
     FooterComponent,
     ProductComponent,
     ProductListComponent,
+    ProductItemComponent,
     ModalProductViewComponent,
     SigninComponent,
     SignupComponent,
-    ProductDetailComponent,
-    LoadingComponent
+    LoadingComponent,
+    PaymentCardComponent,
+    ProductDetailsComponent,
+    ProductDescriptionComponent,
+    ProductAdditionalInfoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component,EventEmitter,Input, Output} from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from 'src/app/models/product';
 
 @Component({
@@ -6,11 +6,18 @@ import { Product } from 'src/app/models/product';
   templateUrl: './modal-product-view.component.html',
   styleUrls: ['./modal-product-view.component.css']
 })
-export class ModalProductViewComponent {
-  @Input() product: Product | undefined;
-  @Output() close : EventEmitter<string>= new EventEmitter<string>()
+export class ModalProductViewComponent implements OnInit {
 
-  CloseModal(){
-    this.close.emit();
+  @Input() product: Product | undefined
+  @Output() close : EventEmitter<string> = new EventEmitter<string>()
+
+  constructor() { }
+
+  ngOnInit(): void {
   }
+
+  closeModal(){
+    this.close.emit()
+  }
+
 }

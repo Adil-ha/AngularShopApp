@@ -1,5 +1,5 @@
-.container{
-  padding: 30PX;
+.container
+{
   min-height: 70vh;
-  background-color: rgb(228, 228, 228);
+  background-color: #efefef;
 }

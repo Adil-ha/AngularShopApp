@@ -6,10 +6,14 @@ describe('ModalProductViewComponent', () => {
   let component: ModalProductViewComponent;
   let fixture: ComponentFixture<ModalProductViewComponent>;
 
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ ModalProductViewComponent ]
+    })
+    .compileComponents();
+  });
+
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [ModalProductViewComponent]
-    });
     fixture = TestBed.createComponent(ModalProductViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
